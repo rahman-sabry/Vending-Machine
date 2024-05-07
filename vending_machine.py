@@ -75,6 +75,8 @@ class Main:
         if balance == 0:
             return print("\nExact amount received. No change required.")
 
+        print(f"\nYour total change is ${balance}")
+
         change = {}
         for note in self.valid_notes:
             if balance >= note:
