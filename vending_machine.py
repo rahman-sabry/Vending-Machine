@@ -57,7 +57,7 @@ class Main:
     def get_valid_amount(self):
         while True:
             try:
-                num = int(input("\nInput Amount: "))
+                num = int(input("\nInput Amount: $"))
                 if num < self.selected.get("price"):
                     raise Exception(
                         "Insufficient Amount. Please input an amount that is more than the price stated."
@@ -83,7 +83,7 @@ class Main:
                 balance -= note_count * note
 
         print("\nDispensing change...")
-        time.sleep(2)
+        time.sleep(1)
         print("\nHere is your change\n")
         sentences = []
         sentences.append(f"Note: Count")
@@ -118,11 +118,11 @@ class Main:
 
         # Retrieve payment and dispense change
         amount = self.get_valid_amount()
-        time.sleep(1)
+        time.sleep(0.5)
         print(f"\nDispensing drink...")
-        time.sleep(2)
-        print(f"\nSuccesfully dispensed a {self.selected.get('name')}")
         time.sleep(1)
+        print(f"\nSuccesfully dispensed a {self.selected.get('name')}")
+        time.sleep(0.5)
         self.dispense_change(amount)
 
         print(f"\nEnjoy your {self.selected.get('name')}! Please come again!")
